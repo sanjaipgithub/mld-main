@@ -3,7 +3,7 @@ import AOS from 'aos';
 import "aos/dist/aos.css";
 import './index.css';
 import {
-  BrowserRouter as Router,
+  HashRouter as Router, // Use HashRouter instead of BrowserRouter
   Routes,
   Route
 } from 'react-router-dom';
@@ -34,7 +34,7 @@ function App() {
 
   return (
     <>
-      <Router>
+      <Router> {/* Changed to HashRouter */}
         <ScrollToTop>
           <Routes>
             <Route path="/" element={<Home />} />
@@ -46,6 +46,5 @@ function App() {
     </>
   );
 }
-
 
 export default App;
